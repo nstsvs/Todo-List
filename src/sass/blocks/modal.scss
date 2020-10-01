@@ -1,0 +1,71 @@
+@import "global/variables.scss";
+@import "global/mixins.scss";
+
+.modal {
+  width: 300px;
+  position: absolute;
+  height: 512px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0px 23px 98px 46px rgba(0, 1, 1, 0.5);
+  background: #F2F2F2;
+  border-radius: 5px;
+  display: none;
+}
+
+.modal__show {
+  z-index: 1;
+  display: block;
+}
+
+.modal__title {
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  font-weight: normal;
+  justify-content: center;
+  color: #333333;
+  margin-bottom: 0;
+}
+
+.modal__form {
+  justify-content: space-between;
+  display: flex;
+}
+
+.modal__close-btn {
+  @include button;
+  right: 5%;
+  top: 3%;
+  position: absolute;
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    z-index: 1;
+    height: 490px;
+    width: 984px;
+    border-radius: 20px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 -1px 198px 108px rgba(0,1,1,.5);
+  }
+
+  .modal__title {
+    margin-top: 40px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .modal__close-btn {
+    right: 4%;
+    top: 10.4%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal {
+    width: 1040px;
+  }
+}

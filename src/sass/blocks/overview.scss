@@ -1,0 +1,305 @@
+@import "global/variables.scss";
+
+.overview__section {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,2%);
+  position: relative;
+}
+
+.overview__wrap {
+  display: flex;
+  margin-bottom: 12px;
+  width: 300px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,2%);
+  position: relative;
+  border-bottom: 1px solid #C4C4C4;
+  padding-bottom: 9px;
+}
+
+.overview__title {
+  display: flex;
+  position: relative;
+  left: 7%;
+  top: 3px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #333333;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    left: -5px;
+    top: -7px;
+    background: #C4C4C4;
+  }
+}
+
+.buttons-task {
+  display: flex;
+  position: relative;
+  right: -42px;
+  top: 2px;
+}
+
+.buttons-task__check-icon,
+.buttons-task__pen-icon,
+.buttons-task__trash-icon {
+  border: 1px solid #828282;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  outline: 0;
+  padding: 5px 0px 0px 5px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  background-color: inherit;
+}
+
+.buttons-task__trash-icon:hover,
+.buttons-task__pen-icon:hover,
+.buttons-task__check-icon:hover {
+ background-color: #E6E6E6;
+}
+
+.buttons-task__trash-icon:active,
+.buttons-task__pen-icon:active,
+.buttons-task__check-icon:active {
+  background-color: #BDBDBD;
+}
+
+.buttons-task__trash-icon,
+.buttons-task__check-icon {
+  margin-right: 5px;
+}
+
+.buttons-task__check-icon::before {
+  z-index: 1;
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 7px;
+  top: 7px;
+  background: url("../img/icon-exclude_1.svg");
+}
+
+.buttons-task__pen-icon::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 21px;
+  left: 7px;
+  top: 10px;
+  background: url("../img/icon-union_2.svg");
+}
+
+.overview__button-back {
+  position: relative;
+  left: -3%;
+  top: 3px;
+  transform: rotate(90deg);
+}
+
+.buttons-task__desktop {
+  display: none;
+}
+
+.buttons-task__trash-icon::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 24px;
+  left: 10px;
+  top: 6px;
+  background: url("../img/icon-trash.svg");
+}
+
+@media (min-width: $tablet-width) {
+  .buttons-task__desktop {
+    display: none;
+  }
+
+  .overview__section {
+    left: 60%;
+    transform: translate(-50%,9%);
+    width: 664px;
+  }
+
+  .overview__wrap {
+    width: 664px;
+    left: 60%;
+    padding-bottom: 2px;
+  }
+
+  .overview__title {
+    left: 5%;
+    top: -1px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
+    &::before {
+      left: -13px;
+      top: -2px;
+    }
+  }
+
+  .overview__button-back {
+    top: 0;
+    left: -25px;
+  }
+
+  .overview__info{
+    width: 664px;
+    top: 8px;
+    left: 10.2%;
+    position: relative;
+    border-radius: 10px;
+  }
+
+  .overview__table {
+    width: inherit;
+  }
+
+  .buttons-task {
+    right: -44%;
+    top: 18px;
+  }
+
+  .button__text-tablet {
+    position: relative;
+    left: 34%;
+    top: 20%;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+
+  .buttons-task::before {
+    left: 13px;
+  }
+
+  .buttons-task::after {
+    left: 159px;
+  }
+
+  .buttons-task__edit {
+    left: 29%;
+  }
+
+  .buttons-task__trash-icon::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 24px;
+    left: 10px;
+    top: 6px;
+    background: url("../img/icon-trash.svg");
+  }
+
+  .buttons-task__trash-icon,
+  .buttons-task__check-icon {
+    margin-right: 10px;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  .buttons-task__trash-icon {
+   width: 116px;
+   margin-right: 12px;
+   display: block;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 24px;
+      left: 17px;
+      top: 6px;
+      background: url("../img/icon-trash.svg");
+    }
+  }
+
+  .buttons-task__check-icon {
+   width: 135px;
+
+    &::before {
+      left: 14px;
+    }
+  }
+
+  .buttons-task__pen-icon {
+    width: 161px;
+
+    &::before {
+      left: 11px;
+    }
+  }
+
+  .buttons-task__desktop {
+    display: flex;
+    left: 35%;
+    top: -2px;
+    position: relative;
+  }
+
+  .buttons-task__del {
+   left: 42%;
+  }
+
+  .buttons-task__edit {
+   display: flex;
+   left: 28%;
+  }
+
+  .overview__section {
+    width: 1080px;
+    left: 39%;
+    transform: translate(-50%,7%);
+  }
+
+  .overview__wrap {
+    width: 1080px;
+    left: 79.4%;
+    padding-bottom: 10px;
+    margin-bottom: 31px;
+    transform: translate(-50%,11%);
+  }
+
+  .overview__title {
+    left: 3%;
+    top: 7px;
+  }
+
+  .overview__info {
+    width: 1080px;
+    left: 29.4%;
+    top: -2px;
+  }
+
+  .overview__button-back {
+    left: -2.6%;
+    top: 6px;
+  }
+
+  .buttons-task {
+    right: -38.3%;
+    top: 25px;
+  }
+
+  .buttons-task::after {
+    left: 284px;
+  }
+}

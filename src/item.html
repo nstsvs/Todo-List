@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To-Do List</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrap">
+        <h1 class="header__title">To-Do List</h1>
+        <button class="header__add-task" aria-label="Добавить задачу"></button>
+      </div>
+      <button class="header__nav-toggle" type="button" aria-label="Открыть меню"></button>
+      <div class="nav">
+        <nav class="nav__wrap menu">
+          <fieldset class="menu__block-one">
+            <ul class="menu__list menu-list">
+              <li class="menu-list_item menu__radio">
+                 <input class="menu__radio_input visually-hidden" type="radio" value="news" id="new" name="type">
+                   <button type="button" class="menu__radio-button" aria-label="Новые">
+                     <span class="menu__radio_label">Новые</span>
+                   </button>
+              </li>
+              <li class="menu-list_item menu__radio">
+                 <input class="menu__radio_input visually-hidden" type="radio" id="done" value="dones" name="type" checked>
+                   <button type="button" class="menu__radio-button" aria-label="Выполненные">
+                     <span class="menu__radio_label">Выполненные</span>
+                   </button>
+              </li>
+              <li class="menu-list_item menu__radio">
+                 <input class="menu__radio_input visually-hidden" type="radio" value="alls" id="all" name="type">
+                   <button type="button" class="menu__radio-button" aria-label="Все">
+                     <span class="menu__radio_label">Все</span>
+                   </button>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="menu__block-two filter">
+            <button class="filter__button-arrow" aria-label="Показать"></button>
+            <h2 class="filter__title">Приоритет</h2>
+            <ul class="filter__list filter__drop-menu">
+              <li class="filter__list-item">
+               <button type="button" class="filter__button-priority">
+                 <span class="filter__button-title">Высокий</span>
+               </button>
+              </li>
+              <li class="filter__list-item">
+                <button type="button" class="filter__button-priority">
+                 <span class="filter__button-title">Средний</span>
+                </button>
+              </li>
+              <li class="filter__list-item">
+                <button type="button" class="filter__button-priority">
+                 <span class="filter__button-title">Низкий</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+   </header>
+    <main>
+    <section class="overview overview__section">
+    <h2 class="visually-hidden">Задача</h2>
+      <div class="overview__wrap">
+        <a class="overview__button-back" href="index.html">
+          <svg width="21" height="12">
+            <use xlink:href="img/sprite.svg#icon-arrow_1"></use>
+          </svg>
+        </a>
+        <p class="overview__title">Сходить в магазин</p>
+        <div class="buttons-task">
+         <button class="buttons-task__check-icon" type="button" aria-label="Выполнена">
+         <span class="buttons-task__desktop">Выполнена</span>
+         </button>
+         <button class="buttons-task__trash-icon" type="button" aria-label="Удалить">
+          <span class="buttons-task__desktop buttons-task__del">Удалить</span>
+          </button>
+         <button class="buttons-task__pen-icon" type="button" aria-label="Редактировать">
+         <span class="buttons-task__desktop buttons-task__edit">Редактировать</span>
+         </button>
+        </div>
+      </div>
+      <div class="overview__info info">
+      <ul class="info__wrap">
+       <li>
+        <table class="info__table">
+         <tbody class="info__row">
+           <tr class="info__first-row">
+            <td class="info__text-small">Статус задачи</td>
+            <td class="info__text-big info__text-big--done">Выполнена</td>
+           </tr>
+           <tr class="info__middle-row">
+            <td class="info__text-small">Приоритет</td>
+            <td class="info__text-big">Высокий</td>
+           </tr>
+         </tbody>
+        </table>
+        </li>
+        <li>
+        <table class="info__table">
+         <tbody class="info__row info__row-bottom">
+           <tr class="info__second-row">
+            <td class="info__text-small info__deadline">Дедлайн</td>
+            <td class="info__text-big">29.09.2020, 18:32</td>
+            <td class="info__text-small info__dote">Метка</td>
+           </tr>
+         </tbody>
+        </table>
+        </li>
+       </ul>
+      </div>
+       <div class="overview__text-wrap">
+         <p class="overview__text overview__text-first">Огибающая семейства поверхностей, конечно, естественно трансформирует интеграл по бесконечной области. Однако не все знают, что ортогональный определитель правомочен. Функция B(x,y) поддерживает интеграл от функции комплексной переменной, откуда следует доказываемое равенство.</p>
+         <p class="overview__text overview__text-tablet">Линейное уравнение категорически масштабирует линейно зависимый критерий сходимости Коши, что неудивительно. Геометрическая прогрессия, как следует из вышесказанного, детерменирована. Интеграл Гамильтона оправдывает интеграл от функции, имеющий конечный разрыв. По сути, прямоугольная матрица оправдывает аксиоматичный интеграл от функции, обращающейся в бесконечность вдоль линии, при этом, вместо 13 можно взять любую другую константу.</p>
+       </div>
+    </section>
+    </main>
+
+  <!-- Модальное окно "Создать задачу" -->
+
+    <div class="modal">
+      <h2 class="modal__title">Создание задачи</h2>
+      <button class="modal__close-btn" type="button" aria-label="Закрыть">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-union"></use>
+          </svg>
+      </button>
+      <form class="modal__form form" action="/" method="POST">
+        <fieldset class="fieldset">
+         <ul class="fieldset__list">
+          <li class="fieldset__input-wrap">
+            <label class="fieldset__label fieldset__name" for="name">Название</label>
+            <input class="fieldset__input fieldset__input-name" id="name" type="text" name="name" placeholder="Сходить в магазин" required>
+          </li>
+          <li class="fieldset__input-wrap">
+            <label class="fieldset__label fieldset__date-time" for="date-time">Дедлайн</label>
+            <input class="fieldset__input" id="date-time" type="text" name="date-time" placeholder="29.09.2020, 18:32">
+            <svg class="fieldset__calendar-svg" width="30" height="30">
+              <use xlink:href="img/sprite.svg#icon-calendar"></use>
+            </svg>
+          </li>
+          <li class="fieldset__input-wrap">
+              <label class="fieldset__label fieldset__priority" for="priority">Приоритет</label>
+              <input class="fieldset__input" id="priority" type="text" name="priority" placeholder="Высокий">
+              <svg class="fieldset__priority-svg" width="17" height="9">
+                <use xlink:href="img/sprite.svg#icon-arrow-modal"></use>
+              </svg>
+          </li>
+          <li class="fieldset__input-wrap">
+            <label class="fieldset__label fieldset__mark" for="color">Метка</label>
+            <input class="fieldset__input fieldset__mark-input" id="color" type="text" name="color" placeholder="#F2C94C">
+          </li>
+          <li class="fieldset__input-wrap fieldset__desc-wrap">
+            <p class="fieldset__desc">Описание</p>
+            <textarea class="fieldset__text fieldset__textarea-mobile" id="desc" name="desc">вышесказанного, детерменирована. Интеграл Гамильтона оправдывает интеграл от функции, имеющий конечный разрыв. По сути, прямоугольная матрица оправдывает аксиоматичный интеграл от функции, обращающейся в бесконечность вдоль линии, при этом, вместо 13 можно взять любую другую константу."</textarea>
+            <textarea class="fieldset__text fieldset__textarea-tablet" id="desc-second" name="desc">Линейное уравнение категорически масштабирует линейно зависимый критерий сходимости Коши, что неудивительно. Геометрическая прогрессия, как следует из вышесказанного, детерменирована. Интеграл Гамильтона оправдывает интеграл от функции, имеющий конечный разрыв. По сути, прямоугольная матрица оправдывает аксиоматичный интеграл от функции, обращающейся в бесконечность вдоль линии, при этом, вместо 13 можно взять любую другую константу.</textarea>
+          </li>
+         </ul>
+         <div class="form__buttons">
+          <button class="form__button-undo" type="button">Отменить</button>
+          <button class="form__button-create" type="submit">Создать</button>
+         </div>
+       </fieldset>
+      </form>
+    </div>
+
+  <!-- Модальное окно "Редактировать задачу" -->
+
+    <div class="modal modal-edit">
+      <h2 class="modal__title">Редактирование задачи</h2>
+      <button class="modal__close-btn" type="button" aria-label="Закрыть">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-union"></use>
+          </svg>
+      </button>
+      <form class="modal__form form" action="/" method="POST">
+        <fieldset class="fieldset">
+         <ul class="fieldset__list">
+          <li class="fieldset__input-wrap">
+            <label class="fieldset__label fieldset__name" for="name-edit">Название</label>
+            <input class="fieldset__input fieldset__input-name" id="name-edit" type="text" name="name" placeholder="Сходить в магазин" required>
+          </li>
+          <li class="fieldset__input-wrap">
+            <label class="fieldset__label fieldset__date-time" for="date-time-edit">Дедлайн</label>
+            <input class="fieldset__input" id="date-time-edit" type="text" name="date-time-edit" placeholder="29.09.2020, 18:32">
+            <svg class="fieldset__calendar-svg" width="30" height="30">
+              <use xlink:href="img/sprite.svg#icon-calendar"></use>
+            </svg>
+          </li>
+          <li class="fieldset__input-wrap">
+              <label class="fieldset__label fieldset__priority" for="priority-edit">Приоритет</label>
+              <input class="fieldset__input" id="priority-edit" type="text" name="priority-edit" placeholder="Высокий">
+              <svg class="fieldset__priority-svg" width="17" height="9">
+                <use xlink:href="img/sprite.svg#icon-arrow-modal"></use>
+              </svg>
+          </li>
+          <li class="fieldset__input-wrap">
+            <label class="fieldset__label fieldset__mark" for="color-edit">Метка</label>
+            <input class="fieldset__input fieldset__mark-input" id="color-edit" type="text" name="color-edit" placeholder="#F2C94C">
+          </li>
+          <li class="fieldset__input-wrap fieldset__desc-wrap">
+            <p class="fieldset__desc">Описание</p>
+            <textarea class="fieldset__text fieldset__textarea-mobile" id="desc-edit" name="desc">вышесказанного, детерменирована. Интеграл Гамильтона оправдывает интеграл от функции, имеющий конечный разрыв. По сути, прямоугольная матрица оправдывает аксиоматичный интеграл от функции, обращающейся в бесконечность вдоль линии, при этом, вместо 13 можно взять любую другую константу."</textarea>
+            <textarea class="fieldset__text fieldset__textarea-tablet" id="desc-edit-second" name="desc">Линейное уравнение категорически масштабирует линейно зависимый критерий сходимости Коши, что неудивительно. Геометрическая прогрессия, как следует из вышесказанного, детерменирована. Интеграл Гамильтона оправдывает интеграл от функции, имеющий конечный разрыв. По сути, прямоугольная матрица оправдывает аксиоматичный интеграл от функции, обращающейся в бесконечность вдоль линии, при этом, вместо 13 можно взять любую другую константу.</textarea>
+          </li>
+         </ul>
+         <div class="form__buttons">
+          <button class="form__button-delete" type="button" aria-label="Удалить">
+            <svg width="18" height="18" viewBox="0 0 18 18">
+              <use xlink:href="img/sprite.svg#icon-trash-edit"></use>
+            </svg>
+          </button>
+          <button class="form__button-undo" type="button">Отменить</button>
+          <button class="form__button-create" type="submit">Создать</button>
+         </div>
+       </fieldset>
+      </form>
+    </div>
+
+    <script src="js/burger-menu.js"></script>
+    <script src="js/drop-menu.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/modal-edit.js"></script>
+
+  </body>
+</html>

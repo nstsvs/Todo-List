@@ -1,0 +1,134 @@
+@import "global/variables.scss";
+@import "global/mixins.scss";
+
+.menu__list {
+  padding: 0;
+  margin-top: 16px;
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 26px;
+}
+
+.menu-list_item {
+  height: 40px;
+}
+
+.menu__radio-button {
+  @include button;
+  width: 240px;
+  position: relative;
+  height: 40px;
+  padding: 0;
+  text-align: start;
+  padding-left: 53px;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    background-color: #F2F2F2;
+  }
+
+  &:active {
+    background-color: #BDBDBD;
+  }
+
+  &::before {
+    position: absolute;
+    left: 5%;
+    top: 24%;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    content: '';
+    background: url("../img/icon-oval.svg");
+  }
+}
+
+.menu__block-one {
+  border: none;
+  padding-bottom: 2px;
+}
+
+.menu__block-two {
+  width: 240px;
+  left: 4%;
+  position: relative;
+}
+
+.menu__radio_label {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #333333;
+}
+
+.menu__radio_input:checked ~ .menu__radio-button::before {
+  position: absolute;
+  left: 5%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  content: '';
+  background: url("../img/icon-exclude.svg");
+}
+
+.menu__radio_input ~ .menu__radio-button:hover::before {
+  position: absolute;
+  left: 5%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  content: '';
+  background: url("../img/icon-ellipse_1.svg");
+}
+
+@media (min-width: $tablet-width) {
+  .menu__list {
+    margin-top: 58px;
+    margin-bottom: 0;
+  }
+
+  .menu__radio_label {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .menu__radio-button {
+   width: 290px;
+
+   &::before {
+    width: 24px;
+    height: 24px;
+    top: 15%;
+    background: url("../img/icon-icon.svg");
+   }
+  }
+
+  .menu__radio_input:checked ~ .menu__radio-button::before {
+    width: 24px;
+    height: 24px;
+    background: url("../img/icon-exclude_1.svg");
+  }
+
+  .menu__radio_input ~ .menu__radio-button:hover::before {
+    width: 24px;
+    height: 24px;
+    background: url("../img/icon-ellipse_2.svg");
+  }
+
+  .menu__block-one {
+    padding-bottom: 20px;
+  }
+
+  .menu__block-two {
+    width: 290px;
+   }
+}
+
+@media (min-width: $desktop-width) {
+  .menu__list {
+    margin-bottom: 0;
+  }
+}

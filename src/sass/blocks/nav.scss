@@ -1,0 +1,36 @@
+@import "global/variables.scss";
+
+.nav__wrap {
+  position: relative;
+}
+
+.nav {
+  z-index: 1;
+  width: 260px;
+  height: 94%;
+  background-color: #E6E6E6;
+  position: absolute;
+  box-shadow: 63px 0px 0px 0px rgba(50, 50, 50, 0.2);
+  display: none;
+}
+
+.nav-open {
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .nav {
+    margin-top: 6px;
+    width: 320px;
+    height: 89%;
+    position: absolute;
+    display: block;
+    box-shadow: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav {
+    margin-top: 7px;
+  }
+}

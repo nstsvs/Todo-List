@@ -1,0 +1,243 @@
+@import "global/variables.scss";
+
+.fieldset {
+  border: 0;
+  width: 100%;
+}
+
+.fieldset__input-wrap {
+  position: relative;
+  list-style: none;
+  margin-bottom: 9px;
+}
+
+.fieldset__name,
+.fieldset__date-time,
+.fieldset__mark,
+.fieldset__desc,
+.fieldset__priority {
+  position: relative;
+  margin-bottom: 6px;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  color: #4F4F4F;
+}
+
+.fieldset__input {
+  display: flex;
+  width: 90%;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  height: 40px;
+  padding: 0 12px 0;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+
+   &::placeholder {
+    color: #333333;
+  }
+}
+
+.fieldset__list {
+  padding: 0;
+}
+
+.fieldset__text {
+  width: 92%;
+  height: 112px;
+  resize: none;
+  border: 0;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  padding: 5px 10px 7px 10px;
+  border-radius: 5px;
+  color: #333333;
+}
+
+.fieldset__textarea-tablet {
+  display: none;
+}
+
+.fieldset__desc::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 50px;
+  right: 8px;
+  top: 87px;
+  background: #E0E0E0;
+  border-radius: 5px;
+}
+
+.fieldset__desc-wrap {
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 4px;
+}
+
+.fieldset__mark-input {
+  width: 75%;
+  padding-left: 19%;
+}
+
+.fieldset__mark::before {
+  content: '';
+  position: absolute;
+  top: 29px;
+  left: 17px;
+  width: 20px;
+  height: 20px;
+  background-color: #F2C94C;
+  border-radius: 50%;
+}
+
+.fieldset__calendar-svg {
+  position: absolute;
+  top: 40%;
+  right: 3%;
+}
+
+.fieldset__priority-svg {
+  position: absolute;
+  top: 58%;
+  right: 5%;
+}
+
+@media (min-width: $tablet-width) {
+  .fieldset {
+    height: 425px;
+  }
+
+  .fieldset__textarea-mobile {
+    display: none;
+  }
+
+  .fieldset__textarea-tablet {
+    display: block;
+  }
+
+  .fieldset__list {
+    width: 904px;
+    margin-top: 5px;
+    position: relative;
+    height: 394px;
+    padding-left: 28px;
+  }
+
+  .fieldset__name,
+  .fieldset__date-time,
+  .fieldset__mark,
+  .fieldset__desc,
+  .fieldset__priority {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .fieldset__input {
+    position: relative;
+    width: 264px;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .fieldset__input-wrap {
+    width: 288px;
+
+    &:nth-child(3) {
+      position: relative;
+      top: -71px;
+      left: 34%;
+    }
+
+    &:nth-child(4) {
+      width: 288px;
+      position: relative;
+      top: -141px;
+      left: 68.2%;
+    }
+  }
+
+  .fieldset__input-name {
+    width: 880px;
+  }
+
+  .fieldset__mark-input {
+    width: 225px;
+    padding-left: 18%;
+  }
+
+  .fieldset__desc-wrap {
+    position: relative;
+    padding-bottom: 36px;
+    width: 904px;
+    top: -147px;
+    width: 904px;
+  }
+
+  .fieldset__desc::before {
+    right: 5px;
+  }
+
+  .fieldset__text {
+    width: 884px;
+    font-size: 18px;
+    line-height: 21px;
+    border-radius: 10px;
+    padding: 9px 10px 6px;
+  }
+
+  .fieldset__mark::before {
+    z-index: 1;
+    top: 32px;
+  }
+
+  .fieldset__calendar-svg {
+    top: 45%;
+  }
+
+  .fieldset__priority-svg {
+    top: 62%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fieldset__calendar-svg {
+    right: -7%;
+  }
+
+  .fieldset__priority-svg {
+  right: -5%;
+  }
+
+  .fieldset__input {
+    position: relative;
+    width: 295px;
+  }
+
+  .fieldset__mark-input {
+    width: 225px;
+  }
+
+  .fieldset__list {
+   width: 990px;
+  }
+
+  .fieldset__input-name {
+    width: 940px;
+  }
+
+  .fieldset__desc-wrap {
+    width: 961px;
+  }
+
+  .fieldset__text {
+    width: 940px;
+  }
+}

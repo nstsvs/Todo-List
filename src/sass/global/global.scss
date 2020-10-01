@@ -1,0 +1,35 @@
+@import "global/variables.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+
+  background-color: #F2F2F2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 320px;
+  margin: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}

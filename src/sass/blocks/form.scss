@@ -1,0 +1,76 @@
+@import "global/variables.scss";
+@import "global/mixins.scss";
+
+.form__button-undo {
+  @include button;
+  margin-right: 15px;
+}
+
+.form__button-create {
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.form__buttons {
+  display: flex;
+  margin-top: -9px;
+  margin-left: 106px;
+}
+
+.form__button-delete {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .form__buttons {
+    position: relative;
+    top: -12%;
+    width: 170px;
+    left: 56%;
+  }
+
+  .form__button-create {
+    width: 75px;
+    position: relative;
+    left: 71%;
+  }
+
+  .form__button-undo {
+    width: 85px;
+    left: 70%;
+    position: relative;
+  }
+
+  .form__button-delete {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__buttons {
+    left: -6.7%;
+    width: 1040px;
+  }
+
+  .form__button-undo {
+    left: 73%;
+  }
+
+  .form__button-create {
+    left: 72%;
+  }
+
+  .form__button-delete {
+    @include button;
+    display: block;
+    position: relative;
+    fill: #333333;
+  }
+
+  .form__button-delete:hover {
+    fill: #EB5757;
+  }
+}
